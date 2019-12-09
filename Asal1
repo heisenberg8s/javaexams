@@ -1,0 +1,28 @@
+package javaapplication1;
+import java.util.*;
+public class JavaApplication1 {
+    public static void main(String[] args) {
+        Scanner f = new Scanner(System.in);
+        //n sayısına kadar olan asalları listeleyen kod
+        System.out.println("Bir sınır değeri girin : ");
+        int n =f.nextInt();
+        if(n==1){
+            System.out.println("Asal sayılar birden büyüktür");
+        }
+        else {
+        for(int i=2;i<=n;i++){
+            boolean asal=true;
+            for(int j=2;j<i;j++){
+                if (i%j==0){
+                    asal=false;
+                    break;
+                }
+            }
+            if(asal==true){
+                System.out.println(i);
+            }
+        }
+        }
+    }
+    
+}
